@@ -16,7 +16,8 @@ def getweather_data():
     }
     response = requests.get(url,params=param)
     data = response.json()
-    return f'Data = {data}'
+    city = data['name']
+    return f'Data = {data},city : {city}'
 
 
 if __name__ == '__main__':
